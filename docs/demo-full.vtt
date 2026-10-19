@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00.000 --> 00:07.000
+Select twelve fictional files and ask local Gemma for a plan.
+
+00:07.000 --> 01:33.000
+The local model is planning. This version preserves the original waiting time.
+
+01:33.000 --> 01:39.000
+Review the proposed destinations and source quotes. Two unclear files stay for review.
+
+01:39.000 --> 01:43.000
+Approve nine moves, then open their history.
+
+01:43.000 --> 01:47.000
+Undo the moves and reopen the inbox.
+
+01:47.000 --> 01:51.300
+All twelve files are back. Original hashes were verified separately after undo.

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.local/
+.filenap/
+.venv/
+.DS_Store
+artifacts/

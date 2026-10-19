@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A recorded FileNap demo: local Gemma file plans, reviewed moves and undo with fictional documents.">
+  <title>FileNap — recorded local demo</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">FileNap · DEV Hacktoberfest 2026, Week 3</p>
+      <h1>A file plan you can review.<br>A move you can undo.</h1>
+      <p class="intro">Local Gemma suggests where files belong. FileNap shows the source evidence, waits for approval and keeps a record of each move.</p>
+    </header>
+
+    <section aria-labelledby="short-title">
+      <div class="section-heading">
+        <h2 id="short-title">The recorded flow</h2>
+        <span class="duration">42.6 seconds · edited</span>
+      </div>
+      <video id="short-demo" controls playsinline preload="metadata" aria-describedby="edit-note demo-data">
+        <source src="filenap-demo-condensed.mp4" type="video/mp4">
+        <track kind="captions" src="demo-condensed.vtt" srclang="en" label="English" default>
+        Your browser cannot play this video. <a href="filenap-demo-condensed.mp4">Download the edited recording</a>.
+      </video>
+      <p id="edit-note" class="note"><strong>Timing:</strong> model planning took 89.6 seconds on the development Mac. This edit removes most of that wait and plays the review steps at half speed. It is not a real-time performance demonstration. English captions describe the silent recording.</p>
+    </section>
+
+    <section class="results" aria-label="What happened in this recording">
+      <div><strong>12</strong><span>fictional input files</span></div>
+      <div><strong>9</strong><span>approved moves</span></div>
+      <div><strong>1 + 2</strong><span>kept in place + held for review</span></div>
+      <div><strong>12 / 12</strong><span>original hashes restored after undo</span></div>
+    </section>
+    <p id="demo-data" class="note">The documents are fictional receipts, notes, reading excerpts, a checklist, an ambiguous file and a deliberate prompt-injection example. The 12-file result is one test case; it does not establish accuracy on personal files. Hash restoration was checked separately against the filesystem after the recorded undo.</p>
+
+    <section class="full" aria-labelledby="full-title">
+      <div class="section-heading">
+        <h2 id="full-title">Full recording</h2>
+        <span class="duration">111.3 seconds · original timing</span>
+      </div>
+      <video id="full-demo" controls playsinline preload="metadata">
+        <source src="filenap-demo-full.mp4" type="video/mp4">
+        <track kind="captions" src="demo-full.vtt" srclang="en" label="English" default>
+        Your browser cannot play this video. <a href="filenap-demo-full.mp4">Download the full recording</a>.
+      </video>
+      <p class="note">Both videos show the actual browser session. No narrated audio, generated interface frames or private documents are included.</p>
+    </section>
+
+    <footer>
+      <a href="https://github.com/HyunsikParker/filenap-hf26">Source code and local run instructions <span aria-hidden="true">↗</span></a>
+      <p>Built with Codex assistance. Python app code: MIT. Model weights are not distributed.</p>
+    </footer>
+  </main>
+</body>
+</html>

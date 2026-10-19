@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+Twelve fictional files. Select the files and request a local Gemma plan.
+
+00:06.000 --> 00:14.000
+The 89.6-second model wait is shortened here. Review now plays at half speed.
+
+00:14.000 --> 00:20.500
+Nine proposed moves, one file kept here and two files held for review.
+
+00:20.500 --> 00:28.500
+Approve nine moves. Move history records their destinations.
+
+00:28.500 --> 00:36.000
+Undo the recorded moves and return the unchanged files to the inbox.
+
+00:36.000 --> 00:42.550
+All twelve files are back. A separate filesystem check confirmed the original hashes.

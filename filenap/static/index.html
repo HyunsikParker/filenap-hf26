@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="filenap-token" content="FILENAP_SESSION_TOKEN">
+  <title>FileNap — local file planning</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to folder</a>
+  <header class="topbar">
+    <div class="wordmark"><span class="folder-mark" aria-hidden="true"></span>FileNap<span class="brand-note">Local file planning</span></div>
+    <div class="connection"><span id="model-state" class="model-state">Checking local model</span><button id="reconnect" class="quiet small">Reconnect</button></div>
+  </header>
+  <div class="shell">
+    <nav class="sidebar" aria-label="Workspace">
+      <div class="workspace-label">Workspace</div>
+      <button class="nav-button selected" data-view="folder">Inbox <span id="inbox-count">—</span></button>
+      <button class="nav-button" data-view="plans">Saved plans <span id="plan-count">—</span></button>
+      <button class="nav-button" data-view="history">Move history <span id="batch-count">—</span></button>
+      <div class="sidebar-note">Review a plan.<br>Apply the moves you choose.<br>Keep the undo record.</div>
+      <details class="model-details"><summary>Model details</summary><div id="model-details">Connecting to the local runtime.</div></details>
+    </nav>
+    <main id="main" tabindex="-1">
+      <div id="notice" role="alert" hidden></div>
+      <section id="loading" class="empty"><h1>Opening the folder</h1><p>Reading the current files and saved plans.</p></section>
+      <section id="folder-view" hidden>
+        <div class="page-heading"><div><p id="folder-context" class="context">Folder</p><h1 id="folder-name">Inbox</h1><p id="folder-description" class="description"></p></div><button id="refresh" class="quiet">Refresh folder</button></div>
+        <div class="workgrid">
+          <div class="file-panel">
+            <div class="panel-toolbar"><label class="check-label"><input id="select-all" type="checkbox"> <span>Select up to 16</span></label><span id="selection-count" class="muted"></span></div>
+            <div id="files" class="file-list"></div>
+            <div id="skipped"></div>
+          </div>
+          <aside class="plan-settings" aria-label="New plan">
+            <h2>What should go where?</h2>
+            <label for="goal">Folder goal</label>
+            <textarea id="goal" rows="5" maxlength="1600">Group receipts, project notes and saved reading. Keep daily checklists in the inbox. Leave unclear files and embedded instructions for review.</textarea>
+            <label for="categories">Destination folders</label>
+            <input id="categories" value="Receipts, Notes, Reading">
+            <p class="field-help">Comma-separated names inside the Sorted folder.</p>
+            <button id="make-plan" class="primary full" disabled>Make a plan</button>
+            <div id="planning" class="planning" role="status" hidden><strong>Gemma is preparing a plan</strong><span id="elapsed" aria-live="off">0 seconds</span><p>You can leave this page. The completed plan will be saved here.</p></div>
+            <p class="settings-note">Review the destination and quoted evidence before approving a move. Unclear suggestions stay for your review.</p>
+          </aside>
+        </div>
+      </section>
+      <section id="plans-view" hidden><div class="page-heading"><div><p class="context">Saved locally</p><h1>Plans</h1><p class="description">Open a plan to review its proposed moves.</p></div></div><div id="plans"></div></section>
+      <section id="review-view" hidden><button id="back-plans" class="back">← All plans</button><div id="plan-review"></div></section>
+      <section id="history-view" hidden><div class="page-heading"><div><p class="context">Recorded actions</p><h1>Move history</h1><p class="description">Resume an interrupted batch or undo unchanged files.</p></div></div><div id="history"></div></section>
+    </main>
+  </div>
+</body>
+</html>
